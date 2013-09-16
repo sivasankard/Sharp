@@ -7,6 +7,7 @@
 //
 
 #import "HomeAppDelegate.h"
+#import "HomeViewController.h"
 
 @implementation HomeAppDelegate
 
@@ -19,6 +20,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    _imagesArray = [[NSMutableArray alloc]init];
+    
+    _homeView = [[HomeViewController alloc]init];
+    self.flipBoardNVC = [[FlipBoardNavigationController alloc]initWithRootViewController:self.homeView];
+    [self.window setRootViewController:_flipBoardNVC];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

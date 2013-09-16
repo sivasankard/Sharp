@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlipBoardNavigationController.h"
+
+@class HomeViewController;
 
 @interface HomeAppDelegate : UIResponder <UIApplicationDelegate>
+{
 
+}
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) HomeViewController *homeView;
+@property (strong, nonatomic) FlipBoardNavigationController * flipBoardNVC;
+@property NSMutableArray *imagesArray;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
